@@ -11,4 +11,4 @@ Link to map:
 https://ubc-geob472-spring2019.github.io/scalia16-web/web-mapping/ 
 
 Here's the screenshot
-![alt text](https://github.com/UBC-GEOB472-Spring2019/scalia16-web/raw/master/web-mapping/screenshot%20map.jpg)
+![alt text]()
