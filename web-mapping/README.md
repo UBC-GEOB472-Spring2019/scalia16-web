@@ -7,5 +7,8 @@ To have the map work at more than one zoom level I use the code from one of the 
 MAP CRITIQUE SESSION AND COLLABORATION
 I worked on my own for this lab. However, my neighbour at te computer next to me offered me useful comments on what to include in the map. One of the toughest decisions was what to eliminate from the template offered by map box. I started with a basic style but then switched to the outdors style which provided more information relevant to the type of map I deisgned which is of naturla reserves. It was also very helpful for her to recommend to add intercativity beyond just the name of the location but rather a brief descrption to add more context to the map for users to have a better idea of what they'll find there. 
 
-Link to map: https://api.mapbox.com/styles/v1/scalia16/cjrsg8rrk037f1fpjmenc1r3m.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2NhbGlhMTYiLCJhIjoiY2pyZnBubHgxMmNlczQzbGlwdTQyNHBnbiJ9.k4HvfDF7JIsZoaTFIfrZkQ#6.6/-1.861/-77.633 
-https://ubc-geob472-spring2019.github.io/scalia16-web/web-mapping/ with interactivity
+Link to map:
+https://ubc-geob472-spring2019.github.io/scalia16-web/web-mapping/ 
+
+Here's the screenshot
+![alt text](https://github.com/UBC-GEOB472-Spring2019/scalia16-web/raw/master/web-mapping/screenshot%20map.jpg)
