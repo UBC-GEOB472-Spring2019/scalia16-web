@@ -1,16 +1,14 @@
-<!DOCTYPE html>
-<html>
-<head>
+<!DOCTYPE html><html><head>
 	<title>Leaflet Exercise</title>
-	<meta charset="utf-8" />
+	<meta charset="utf-8">
 
 	<!-- Leaflet styles and code. Place in the <head></head> element. -->
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css" />	
-	<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css">	
+	<script src="leaflet.js"></script>
 
 	<!-- jQuery is a library that simplifies many things in JavaScript. 
 	     We'll use it to retrieve data from the web. -->   
-	<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+	<script src="jquery-3.3.1.min.js"></script>	
 	
 </head>
 <body>
@@ -22,14 +20,14 @@
     <button id="showAllMillsButton">Show All Mills</button>
 
     <span style="display:inline-block; width: 30px"></span>
-     <input type="text" id="highlightMillsTextEntry"
-           placeholder="certificate">
+     <input type="text" id="highlightMillsTextEntry" placeholder="certificate">
     <button id="highlightMillsButton">Highlight</button>
     
 	</div>
   
   <script>
     
+
     var map = L.map('mapid',
                     { 
       								center: [1.781146, 15.009577],
@@ -44,7 +42,10 @@
 												attribution: 'Basemap data: &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, <a href="http://viewfinderpanoramas.org">SRTM</a> | Basemap style: &copy; <a href="https://opentopomap.org">OpenTopoMap</a> (<a href="https://creativecommons.org/licenses/by-sa/3.0/">CC-BY-SA</a>)'
 											}
 										).addTo(map);
-        var millMarkerOptions = {
+    
+ 
+
+    var millMarkerOptions = {
     	radius: 4,
     	fillColor: "#92e809",
     	color: "#000",
@@ -63,17 +64,22 @@
 		};
     
     function onEachMill(feature, layer) {
-          if (feature.properties && feature.properties.certificat) {
+       
+       if (feature.properties && feature.properties.certificat) {
           layer.bindTooltip(feature.properties.certificat);
        }
     }
     
     function millPointToLayer(feature, latlng) {
+
+     
+      
       if (certificatToHighlight === "") {
         millMarkerOptionsToUse = millMarkerOptions;
       } else {
         millMarkerOptionsToUse = millMarkerHighlightedOptions;
       }
+      
       
       return L.circleMarker(
         latlng,
@@ -84,21 +90,21 @@
     function millToFilter (feature, layer) {
       if(certificatToHighlight === "") {
         return true;
-
+       
       }
       else if (feature.properties && feature.properties.certificat) { 
-
+      
         return certificatToHighlight.toLowerCase() === feature.properties.certificat.toLowerCase()
       ;
-			
+				
       } else {
         return false;
-  
+       
       }
     }
     
  		var lastLayerAdded = {};
-
+  
     
     function addMills() {
       if(map.hasLayer(lastLayerAdded)){  
@@ -115,22 +121,23 @@
     };
     
     var certificatToHighlight = "";
-       function highlightMills() {     
+   
+    function highlightMills() {     
     	certificatToHighlight = document
     												.getElementById("highlightMillsTextEntry")
       											.value;     
-      addMills(); // add the trees.
+      addMills(); 
       certificatToHighlight = "";  
     }
 
 		var millsGeoJSONdata; 
     
-           
+        
 		$.getJSON("https://raw.githubusercontent.com/UBC-GEOB472-Spring2019/scalia16-web/master/features.geojson",				
               function(data){
       					
 			      		millsGeoJSONdata = data;
-      					
+      				
 								document
                   .getElementById("showAllMillsButton")
                   .addEventListener("click", addMills);
@@ -145,5 +152,5 @@
  	   
   </script>
 
-</body>
-</html>
+
+</body></html>
