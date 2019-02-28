@@ -1,6 +1,6 @@
 TITLE: Palm oil mills in the geographical south 
 Here's the screenshot
-![alt text]()
+![alt text](https://github.com/UBC-GEOB472-Spring2019/scalia16-web/blob/master/interactive-mapping/Screenshot%20map.jpg)
 
 Link to map:  https://ubc-geob472-spring2019.github.io/scalia16-web/interactive-mapping/
 
