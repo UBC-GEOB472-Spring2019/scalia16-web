@@ -2,7 +2,7 @@ Title: Fun facts about domestic animals
 
 link to page: https://lab-3.glitch.me/ 
 
-Here is a screenshot ![Alt text]( 
+Here is a screenshot ![Alt text](https://github.com/UBC-GEOB472-Spring2019/scalia16-web/blob/master/lab%203/Untitled.jpg) 
 
 
 Collaborations and reliance on other resources: Please document any so I know what you have been able to find and what you have added. What did you learn from a peer visualization critique, if you did one? What did you contribute to others? What coding resources (and individuals) did you draw upon in the process of making your map, and to what effect? (Commenting in the code itself at the places in question is helpful.) 
