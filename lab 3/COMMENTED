@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, WebVR! • A-Frame</title>
+    <meta name="description" content="Hello, WebVR! • A-Frame">
+    <script src="https://aframe.io/releases/0.9.0/aframe.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  </head>
+  
+  <body>
+    <a-scene background="color: #ECECEC">   
+      
+      <a-sky src="https://cdn.glitch.com/bc354bbe-8bf1-4ce5-b15d-463e931d0562%2F33473762308_bcae07e978_o.jpg?1552777002591"></a-sky>
+    
+      
+      <a-gltf-model id="sheep" position="5 -0.36 -7.79" rotation="0 100 0" src="https://cdn.glitch.com/bc354bbe-8bf1-4ce5-b15d-463e931d0562%2Fout.glb?1552690637444"
+                    event-set__enter="_event: mouseenter; _target: #sheep-text; visible: true"
+                    event-set__leave="_event: mouseleave; _target: #sheep-text; visible: false">
+         <a-text id="sheep-text" visible="false" value="Fun facts about sheep: there are over 1 billion sheep in the world and was the first mammal to be cloned from a somatic cell" align="center" position="-3.084 2.076 -2.777" rotation="0.05 -150 0" color="#FFFF00" width="3"
+                 geometry="primitive: plane; width: 3" material="color: #333"></a-text>
+      </a-gltf-model>
+      
+      <a-gltf-model id="horse" class="animal-horse" position="-3.174 -1.083 -4.676" rotation="0 0 0" scale="2 3 2" src="https://cdn.glitch.com/bc354bbe-8bf1-4ce5-b15d-463e931d0562%2Fhorse.glb?1552774941393"
+                    event-set__enter="_event: mouseenter; _target: #horse-text; visible: true"
+                    event-set__leave="_event: mouseleave; _target: #horse-text; visible: false">
+         <a-text id="horse-text" class="animal-horse" visible="false" value="Fun facts about horses: can sleep both lying down and standing up, plus they can run shortly after birth" align="center" position="-2.432 0.690 0.576" rotation="0 80 0" width="3" color="#FFFFFF"
+                 geometry="primitive: plane; width: 3" material="color: #333"></a-text> 
+      </a-gltf-model>
+      
+      <a-gltf-model id="cow" class="animal-cow" position="7.906 -1.520 8.621" rotation="-0.05 210 0" src="https://cdn.glitch.com/bc354bbe-8bf1-4ce5-b15d-463e931d0562%2Fcow.glb?1552778729327"
+                    event-set__enter="_event: mouseenter; _target: #cow-text; visible: true"
+                    event-set__leave="_event: mouseleave; _target: #cow-text; visible: false">
+        <a-text id="cow-text" visible="false" value="Fun facts about cows: they are red-green colorblind and can't vomit" align="center" position="3.120 4.164 2.763" rotation="-0.05 350 0" scale="1.5 1.5 1" width="3" color="#D8BFD8"
+                geometry="primitive: plane; width: 3" material="color: #333"></a-text>
+      </a-gltf-model>
+     
+      <a-gltf-model id="goat" class="animal-goat" position="5.244 -0.384 -2.99" rotation="0 50 0" scale="0.5 0.5 0.5" src="https://cdn.glitch.com/bc354bbe-8bf1-4ce5-b15d-463e931d0562%2Fgoat.glb?1552779325285"
+                    event-set__enter="_event: mouseenter; _target: #goat-text; visible: true"
+                    event-set__leave="_event: mouseleave; _target: #goat-text; visible: false">
+        <a-text id="goat-text" class="animal-goat" visible="false" value="Fun facts about goats: can be taught their name and to come when called" align="center" position="-8.030 3.912 -0.341" rotation="0 -125 0" width="3" color="magenta" 
+                geometry="primitive: plane; width: 3" material="color: #333"></a-text>
+      </a-gltf-model>
+      
+      
+      <a-gltf-model  id="dog" class="animal-dog" position="-7.728 -5.528 -43.054" rotation="0 145 0" scale="0.5 0.5 0.5" src="https://cdn.glitch.com/bc354bbe-8bf1-4ce5-b15d-463e931d0562%2Fdog.glb?1552784918151"
+                    event-set__enter="_event: mouseenter; _target: #dog-text; visible: true"
+                    event-set__leave="_event: mouseleave; _target: #dog-text; visible: false">
+        <a-text id="dog-text" class="animal-dog" visible="false" value="Fun facts about dogs: they are as smart as a 2-year old toddler and can smell your feelings" align="center" position="-59.363 14.582 -57.477" rotation="0 -150 0" width="3" color="cyan"
+                geometry="primitive: plane; width: 3" material="color: #333"></a-text>
+      </a-gltf-model>
+
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+      
+  </a-scene>
+
+  </body>
+</html>
